@@ -1,0 +1,32 @@
+HocSinh = load("HocSinh.rda")
+attach(DL)
+detach(DL)
+        #bai 5
+
+#b
+dim(DL)
+
+#c
+DL[,3]
+
+#d
+DL[10,]
+
+#e
+Nam = subset(DL,GioiTinh == "Nam") ; nrow(Nam)
+Nu = subset(DL,GioiTinh == "Nu") ; nrow(Nu)
+
+#f
+yeuTT = subset(DL, TheThao == 4)
+(nrow(yeuTT) / nrow(DL)) *100
+
+yeuTT_nam = subset(Nam, TheThao == 4)
+(nrow(yeuTT_nam) / nrow(Nam)) *100
+
+yeuTT_nu = subset(Nu, TheThao == 4)
+(nrow(yeuTT_nu) / nrow(Nu)) *100
+
+                #bai 6  
+SV_ngauNhien = sample(1:nrow(DL),50)
+TT = DL[SV_ngauNhien,]
+save(TT, file  = "HocSinh_rand.rda")
