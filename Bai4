@@ -1,0 +1,42 @@
+TT = c(1,2,3,4,5,6,7,8)
+Luong = c(6.0,5.0,4.5,3.8,8.0,12.0,4.0,5.0)
+GioiTinh = c("Nam","Nu","Nam","Nu","Nu","Nam","Nam","Nu")
+TotNghiep = c("K","K","TB","K","G","G","TB","TB")
+Tuoi = c(22,25,23,22,22,23,22,24)
+
+#a
+SinhVien = data.frame(TT,Luong,GioiTinh,TotNghiep,Tuoi)
+
+#b
+subset(SinhVien, GioiTinh == "Nu")
+
+#c
+subset(SinhVien, GioiTinh == "Nam")
+
+#d
+SVnu = subset(SinhVien, GioiTinh == "Nu")
+SVnu[,"Luong"]
+
+#e
+SVnam = subset(SinhVien, GioiTinh == "Nam")
+SVnam[,"Tuoi"]
+
+#f
+subset(SinhVien, Luong > 6.0 & GioiTinh == "Nam")
+
+#g
+subset(SinhVien, Luong > 6.0)
+
+#h
+SinhVienMoi = c(1,7.5,"Nam","G",NA)
+SinhVien = rbind(SinhVien,SinhVienMoi)
+
+#i
+Diem = c(8,7.5,7,7,9,9.5,8,8,9)
+SinhVien[,6] = c(Diem)
+names(SinhVien)[6] = c("DiemLuan")
+
+#j
+
+#k
+na.omit(SinhVien)
