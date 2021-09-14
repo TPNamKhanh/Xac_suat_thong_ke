@@ -1,0 +1,34 @@
+          #bai 1
+
+#a
+TienDT = c(198,185,223,221,207,203,180,195,222,177,214,216)
+
+#b
+sum(TienDT)
+
+#c
+which.max(TienDT) ; max(TienDT)
+which.min(TienDT); min(TienDT) 
+
+#d
+which(TienDT > 200); sum(TienDT > 200)
+
+#e
+sum(TienDT <= 190)
+
+#f
+sum(TienDT >= 190 && TienDT <= 210)
+
+#g
+mean(TienDT)
+
+                  #bai 2
+
+#a
+save(TienDT, file = "TienDT.rda")
+
+#b
+TienDT[2] = 175
+
+#c
+TienDT[14:15] = c(201,185)
